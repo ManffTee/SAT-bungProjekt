@@ -1,0 +1,23 @@
+Alle Änderungen von Aufgabe 2b Quellcode zu Aufgabe 3 Quellcode
+- entfernen der static Eigenschaften bis auf die Spiellogik, da diese immer gleich bleibt
+- Aufteilung in kleinere "Teilelemente"
+- Auslagerung der Ein- und Ausgabe in die Klasse "UserInteraction"
+- Auslagerung der wiederverwendeten Informationen in die Klasse "GameInformations", wo diese durch getter und setter gekapselt sind
+- Erstellen eines Players-Objekts welcher das Symbol und den Namen enthält
+- Der generelle Spielablauf verbleibt in der Klasse VierGewinnt, aber wird weiter aufgefächert in z.B. "gameLoop" welcher das GewinnerSymbol zurückgibt
+- Überprüfung auf mehrfaches starten des gleichen Spiels
+- Überprüfen bei der Zuweisung ob die Mindestgrößen für Zeilen und Spalten eingehalten werden
+- Überprüfung ob bei Eingabe von Zahlen auch keine Buchstaben eingegeben werden -> abfangen der Exception
+- Hinzufügen der Funktion "spielUnentschieden", da dies vorher nicht leicht ersichtlich war
+- "setzeFeld" gibt nichts mehr zurück, sondern speichert den Gewinner im "GameInformations"-Objekt, welches dann nach dem Durchlauf abgefragt werden kann und bei nicht Null-Inhalt das Spiel beendet und das Ergebnis ausgibt
+- Durch das Auslagern von Informationen, konnten zudem Funktionsparameter weggelassen werden, siehe "showField" oder "setField"
+- Ändere Funktionsname ins Englische, damit es einheitlich ist "setzeFeld" zu "setField", "showSpielfeld" zu "showField"
+
+Alle Refactoring Maßnahmen:
+- Change Function Declaration -> Änderung der Methoden-Namen, Entfernen von Parametern, Änderung der Signatur
+- Change Reference to Value -> Verwendung einer zentralen Objektes für die Informationen
+- Change Value to Reference -> Verwendung von getter
+- Consolidate Conditional Expression -> Setter von "numberOfRow" und Setter von "numberOfColumn"
+- Extract Class: getter von den Elemente der Klassen "Player" in "GameInformations"
+- Extract Function: Auslagerung von "spielUnentschieden"
+- Replace Temp with Query -> "static String SPIELER" zu "private Player currentPlayer" mit setter und getter

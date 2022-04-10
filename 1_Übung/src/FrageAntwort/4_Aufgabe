@@ -1,0 +1,15 @@
+4. Entwurfskonzepte
+Groberklärung:
+-> Kohäsion und Kopplung sind ein Maß um die Komplexität einer Software zu analysieren. Es beschreibt die Komplexität der Beziehungen zwischen und innerhalb von Klassen
+- Kohäsion: Kopplung handelt von Abhängigkeiten zwischen Modulen, je höher die Kohäsion ist desto mehr hängt die Klasse von anderen Klassen ab
+- Kopplung: Kohäsion handelt von Abhängigkeiten zwischen Funktionen innerhalb eines Moduls -> gering halten (die einzelnen Klassen sollten so wenig von einander wissen wie möglich)
+- Separation of concern (SoC): Aufteilung der verschiedenen Aufgaben in Teilbereiche -> kein großer Block, sondern viele Kleine
+
+
+
+Erklärung anhand von 3.
+- Kohäsion: Dabei geht es um die Abhängigkeiten der Module von anderen Modulen. Das "VierGewinnt" aus Aufgabe 3 weist eine Vielzahl von Abhängigkeiten auf, da oft auf das Objekt der "GameInformations"-Klasse referenziert wird, daher ist auch die Kohäsion hoch
+- Kopplung: Dabei geht es um die Abhängigkeiten innerhalb der Funktionen eines Moduls. Da viel ausgelagert ist in andere Objekte, sind alle Klassen relativ klein und haben deswegen auch nicht viele Kopplungen untereinander.
+Dazu kann man sagen, dass die Objekte der Klasse "VierGewinnt" so gut wie alles über die anderen Klassen des Projekts wissen.
+- Separation of concern: Also Aufteilung eines großen Blocks, also die Klasse "VierGewinnt" oder die Funktion "play" in kleinere Teil. Die Klasse "VierGewinnt" wurde in 5 kleinere Klassen aufgeteilt,
+in "GameInformations", "GameLogic","Player", "UserInteraction", "VierGewinnt"

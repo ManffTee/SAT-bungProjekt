@@ -1,0 +1,17 @@
+1. Literaturstudium Refactoring -> Ich nutzte "ECLIPSE - Kennenlernen. Verstehen. Effizient nutzen." - ISBN 978-3-446-45466-8 und https://whatis.techtarget.com/de/definition/Refactoring (19.03.2022)
+a. Was ist Refactoring: [ECLIPSE; S.90] -> "Im PDF S. 107"
+    Es geht darum die Struktur eines Programms zu verbessern ohne das Verhalten zu beeinflussen.
+    "Das Ziel des Refactoring ist, die Lesbarkeit, Wartbarkeit und Verständlichkeit der Software zu verbessern."
+    Damit soll der Code leichter zu lesen und verstehen zu sein und somit sollen auch Fehler und Schachstellen leichter gefunden werden.
+
+b. Stichpunktartige Erklärung der Strukturverbesserung: "Replace Temp with Query"
+    (https://www.refactoring.com/catalog/index.html)
+    (https://www.refactoring.com/catalog/replaceTempWithQuery.html)
+    Funktioniert nur bei Objektorientierten Programmiersprachen
+    Gegeben ist ein Funktionsausschnitt von einer Klasse:
+    - Eine konstante Variable besteht aus Multiplikation von 2 Objektvariablen
+    - Block liest nur konstante Variable
+
+    -> Verbesserung:
+    - konstante Variable wird zur getter-Methode
+    - getter-Methode gibt die Multiplikation der 2 Objektvariablen zurück
